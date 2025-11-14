@@ -1,0 +1,87 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #fdf2f6; /* A soft pink background */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  h1 {
+    color: #8b0000;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+    border-bottom: 2px solid #fdeef4;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    font-size: 1.1em;
+  }
+  
+  /* === The Reasons List === */
+  .reasons-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reason-item {
+    background: #fdf2f6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden; /* This is important for the animation */
+  }
+  
+  .reason-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #fdeef4;
+    position: relative;
+  }
+  
+  /* Add a little '+' icon */
+  .reason-title::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    color: #d90368;
+  }
+  
+  /* Style for the description (hidden by default) */
+  .reason-description {
+    padding: 0 20px; /* Padding will be applied when open */
+    max-height: 0; /* This hides it */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  }
+  
+  .reason-description img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* === The "Active" state === */
+  .reason-item.active .reason-title::after {
+    content: '−'; /* Change icon to a minus */
+  }
+  
+  .reason-item.active .reason-description {
+    max-height: 500px; /* Reveals the content */
+    padding: 15px 20px;
+  }
