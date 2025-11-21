@@ -218,6 +218,8 @@
                     ease: "power1.out"
                 });
             });
+
+            document.getElementById('hint').classList.toggle('active');
         });
 
         // Find all the reason card headers

@@ -194,3 +194,10 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
 }
+
+#hint {
+    display: none;
+}
+#hint.active {
+    display: block;
+}
